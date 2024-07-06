@@ -21,7 +21,8 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ### Screenshot
 
-![](./desktop.png) (./mobile.png)
+![Desktop](Desktop.png){width=300}
+![Mobile](mobile.png){width=200}
 
 ### Links
 
@@ -37,19 +38,20 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 - Mobile-first workflow
 - web responsive
 
-
 ### What I learned
 
 When i use position: relative at the parent element (wrapper), the child element (wrapper-qr) that take in position: absolute can be offset (using property top, right, bottom and left) relative to the padding edge of the parent element. If no position property exist in the parent element, the child element will offset relative to the initial containing block of the viewport/HTML.
+
 ```html
 <html>
   <body>
     <div class="wrapper">
-      <div class="wrapper-qr">  </div>
+      <div class="wrapper-qr"></div>
     </div>
   </body>
 </html>
 ```
+
 ```css
 .wrapper {
   position: relative;
@@ -69,15 +71,6 @@ When i use position: relative at the parent element (wrapper), the child element
 }
 ```
 
-```css
-.wrapper-qr {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50px, -50px);
-}
-```
-
 The css property min-width define the width of an element that must be at least or greater than 375px, while max-width property simply means do not exceed 1440px
 
 ```css
@@ -86,7 +79,6 @@ max-width: 1440px;
 ```
 
 'em' unit apply to margin and padding scale relatively to it's parent font size.
-
 
 ## Author
 
